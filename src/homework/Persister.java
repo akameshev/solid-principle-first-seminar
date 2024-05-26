@@ -1,13 +1,9 @@
 package homework;
 
-public class Persister{
-    private final User user;
+public class Persister implements Saved{
 
-    public Persister(User user){
-        this.user = user;
-    }
 
-    public void save(){
-        System.out.println("Save user: " + user.getName());
+    public void save(Account account){
+        System.out.println("Save "+account.getClass().getSimpleName()+" : " + account.getName());
     }
 }
